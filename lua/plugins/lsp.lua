@@ -4,25 +4,33 @@ return {
     dependencies = {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
         "j-hui/fidget.nvim"
     },
 
     config = function()
         local cmp_lsp = require("cmp_nvim_lsp")
+        local fidget = require("fidget")
+        local mason = require("mason")
+        local mason_lsp = require("mason-lspconfig")
+        local mason_tool_installer = require("mason-tool-installer")
+
         local capabilities = vim.tbl_deep_extend(
             "force",
             {},
             vim.lsp.protocol.make_client_capabilities(),
             cmp_lsp.default_capabilities())
 
-        require("fidget").setup({})
-        require("mason").setup({
+        fidget.setup({})
+
+        mason.setup({
             registries = {
                 "github:mason-org/mason-registry",
                 "github:Crashdummyy/mason-registry"
             }
         })
-        require("mason-lspconfig").setup({
+
+        mason_lsp.setup({
             ensure_installed = {
                 "lua_ls"
             },
@@ -48,6 +56,12 @@ return {
                         }
                     }
                 end
+            }
+        })
+
+        mason_tool_installer.setup({
+            ensure_installed = {
+                "roslyn"
             }
         })
 

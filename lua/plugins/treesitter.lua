@@ -1,21 +1,27 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
     opts = {
-        auto_install = false,
         ensure_installed = {
             "lua",
-            "vim",
             "vimdoc",
             "markdown",
-            "markdown_inline",
             "c_sharp",
-            "sql",
             "xml",
             "json"
         },
+
+        sync_install = false,
+
+        auto_install = true,
+
+        indent = {
+            enable = true
+        },
+
         highlight = {
             enable = true,
-            additional_vim_regex_highlighting = false
+            additional_vim_regex_highlighting = { "markdown" }
         }
     }
 }
