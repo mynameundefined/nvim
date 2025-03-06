@@ -32,7 +32,8 @@ return {
 
         mason_lsp.setup({
             ensure_installed = {
-                "lua_ls"
+                "lua_ls",
+                "html"
             },
 
             handlers = {
@@ -61,7 +62,8 @@ return {
 
         mason_tool_installer.setup({
             ensure_installed = {
-                "roslyn"
+                "roslyn",
+                "rzls"
             }
         })
 

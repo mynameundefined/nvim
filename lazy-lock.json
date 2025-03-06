@@ -13,6 +13,7 @@
   "nvim-treesitter": { "branch": "master", "commit": "794cf2f6309691d4e9d3945ae33943a3d90ddd84" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "roslyn.nvim": { "branch": "main", "commit": "633a61c30801a854cf52f4492ec8702a8c4ec0e9" },
+  "rzls.nvim": { "branch": "main", "commit": "93130e44cbc16c592081716d59905353c6a9ad10" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "tokyonight.nvim": { "branch": "main", "commit": "057ef5d260c1931f1dffd0f052c685dcd14100a3" }
 }
